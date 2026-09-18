@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import "@fontsource/public-sans";
+
+@theme {
+  --font-sans: "Public Sans", system-ui, sans-serif;
+
+  --color-primary: #123B5D;
+  --color-primary-hover: #0D2D48;
+  --color-secondary: #1E6B52;
+  --color-secondary-hover: #15523E;
+  --color-tertiary: #C79A32;
+  --color-tertiary-hover: #AD8126;
+  --color-background: #F6F8F7;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #EAF0EE;
+  --color-text: #17222B;
+  --color-text-muted: #5F6B73;
+  --color-border: #D6DEE2;
+  --color-on-primary: #FFFFFF;
+  --color-on-secondary: #FFFFFF;
+  --color-on-tertiary: #17222B;
+  --color-success: #1E6B52;
+  --color-warning: #C79A32;
+  --color-error: #B42318;
+  --color-info: #236A9B;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  --spacing-section: 80px;
+
+  --shadow-card: 0 4px 18px rgba(18,59,93,0.08);
+  --shadow-modal: 0 12px 32px rgba(18,34,43,0.14);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-background text-text font-sans antialiased m-0;
+  }
+
+  /* Typography based on DESIGN.md */
+  h1 {
+    @apply font-sans text-4xl lg:text-[3rem] font-bold leading-[1.12] tracking-tight;
+  }
+
+  h2 {
+    @apply font-sans text-3xl lg:text-[2.25rem] font-bold leading-[1.18];
+  }
+
+  h3 {
+    @apply font-sans text-xl lg:text-[1.5rem] font-semibold leading-[1.25];
+  }
+
+  p {
+    @apply font-sans text-base leading-[1.6];
+  }
+}
