@@ -14,6 +14,12 @@ export function Footer() {
             <br />
             Comprometidos con la salud, educación, deporte y cultura.
           </p>
+          <div className="flex flex-wrap gap-3 mt-6">
+            <img src="/logo_two.png" alt="Logo 2" className="h-10 w-auto bg-surface rounded p-1 object-contain" />
+            <img src="/logo_three.jpg" alt="Logo 3" className="h-10 w-auto bg-surface rounded p-1 object-contain" />
+            <img src="/logo_four.webp" alt="Logo 4" className="h-10 w-auto bg-surface rounded p-1 object-contain" />
+            <img src="/mayor18_.jpg" alt="Mayor de 18 años" className="h-10 w-auto bg-surface rounded p-1 object-contain" />
+          </div>
         </div>
         <div>
           <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider">Enlaces Rápidos</h4>

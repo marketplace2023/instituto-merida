@@ -102,6 +102,13 @@ export function LoteriaPage() {
                 <Link to="/normativa">Biblioteca Normativa</Link>
               </Button>
             </div>
+            
+            <div className="flex flex-wrap gap-4 items-center pt-8">
+              <img src="/logo_two.png" alt="Logo 2" className="h-14 w-auto object-contain rounded-md shadow-sm" />
+              <img src="/logo_three.jpg" alt="Logo 3" className="h-14 w-auto object-contain rounded-md shadow-sm" />
+              <img src="/logo_four.webp" alt="Logo 4" className="h-14 w-auto object-contain rounded-md shadow-sm" />
+              <img src="/mayor18_.jpg" alt="Mayor de 18 años" className="h-14 w-auto object-contain rounded-md shadow-sm" />
+            </div>
           </div>
           <div className="bg-surface-alt p-8 rounded-lg border border-border text-center">
             <div className="w-16 h-16 mx-auto bg-border rounded-full flex items-center justify-center mb-6">
