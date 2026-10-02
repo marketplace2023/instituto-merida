@@ -1,4 +1,5 @@
 import React from "react"
+import { PageBanner } from "@/modules/shared/components/layout/PageBanner"
 import { Button } from "@/modules/shared/components/ui/button"
 import { Input } from "@/modules/shared/components/ui/input"
 
@@ -11,12 +12,10 @@ export function NormativaPage() {
 
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
-      <section className="bg-surface py-12 px-4 border-b border-border">
-        <div className="container mx-auto max-w-[1280px]">
-          <h1 className="text-primary">Biblioteca Normativa</h1>
-          <p className="text-text-muted mt-2">Leyes, reglamentos, resoluciones y providencias que rigen la institución.</p>
-        </div>
-      </section>
+      <PageBanner>
+        <h1 className="text-white">Biblioteca Normativa</h1>
+        <p className="text-white/85 mt-2">Leyes, reglamentos, resoluciones y providencias que rigen la institución.</p>
+      </PageBanner>
 
       <section className="py-8 px-4 bg-surface-alt border-b border-border">
         <div className="container mx-auto max-w-[1280px] flex flex-col md:flex-row gap-4">

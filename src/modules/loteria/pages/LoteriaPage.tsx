@@ -1,4 +1,5 @@
 import React from "react"
+import { PageBanner } from "@/modules/shared/components/layout/PageBanner"
 import { Link } from "react-router-dom"
 import { Button } from "@/modules/shared/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/modules/shared/components/ui/card"
@@ -7,27 +8,25 @@ export function LoteriaPage() {
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
       {/* Hero Institucional - Actividad Regulada */}
-      <section className="bg-primary text-on-primary py-24 px-4">
-        <div className="container mx-auto max-w-[1280px]">
-          <div className="max-w-3xl space-y-6">
-            <span className="text-sm font-bold tracking-widest uppercase opacity-80">
-              Actividad Regulada
-            </span>
-            <h1 className="text-on-primary">Lotería y Juegos Autorizados</h1>
-            <p className="text-lg opacity-90 leading-relaxed">
-              Supervisamos y regulamos la actividad de envite y azar en el estado Mérida para garantizar transparencia, recaudación para obras sociales y protección al ciudadano.
-            </p>
-            <div className="pt-4 flex flex-wrap gap-4">
-              <Button variant="accent" size="lg" asChild>
-                <Link to="/loteria/resultados">Consultar Resultados</Link>
-              </Button>
-              <Button className="bg-white/10 hover:bg-white/20 text-white" size="lg" asChild>
-                <Link to="/loteria/juegos">Ver Juegos Oficiales</Link>
-              </Button>
-            </div>
+      <PageBanner>
+        <div className="max-w-3xl space-y-6">
+          <span className="text-sm font-bold tracking-widest uppercase opacity-80">
+            Actividad Regulada
+          </span>
+          <h1 className="text-white">Lotería y Juegos Autorizados</h1>
+          <p className="text-lg opacity-90 leading-relaxed">
+            Supervisamos y regulamos la actividad de envite y azar en el estado Mérida para garantizar transparencia, recaudación para obras sociales y protección al ciudadano.
+          </p>
+          <div className="pt-4 flex flex-wrap gap-4">
+            <Button variant="accent" size="lg" asChild>
+              <Link to="/loteria/resultados">Consultar Resultados</Link>
+            </Button>
+            <Button className="bg-white/10 hover:bg-white/20 text-white" size="lg" asChild>
+              <Link to="/loteria/juegos">Ver Juegos Oficiales</Link>
+            </Button>
           </div>
         </div>
-      </section>
+      </PageBanner>
 
       {/* Accesos Principales */}
       <section className="py-20 px-4 bg-surface">

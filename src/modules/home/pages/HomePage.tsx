@@ -7,30 +7,50 @@ export function HomePage() {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="relative w-full bg-surface-alt py-20 lg:py-32 overflow-hidden">
-        <div className="container mx-auto max-w-[1280px] px-4 relative z-10">
-          <div className="max-w-2xl space-y-6">
-            <span className="text-sm font-bold text-primary tracking-widest uppercase">
-              Beneficencia y Servicio Público
-            </span>
-            <h1 className="text-primary">
-              Beneficencia, transparencia y servicio para Mérida
-            </h1>
-            <p className="text-lg text-text-muted max-w-xl leading-relaxed">
-              Trabajamos por la salud, educación, deporte y cultura del pueblo merideño. Portal institucional sujeto a validación oficial.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" asChild>
-                <Link to="/beneficencia">Conocer programas sociales</Link>
-              </Button>
-              <Button variant="secondary" size="lg" asChild>
-                <Link to="/tramites">Trámites y servicios</Link>
-              </Button>
+      <section className="grid w-full grid-cols-1 lg:grid-cols-2 lg:min-h-[calc(100vh-80px)] overflow-hidden">
+        {/* Izquierda: foto con texto superpuesto */}
+        <div className="relative flex min-h-130 items-center overflow-hidden">
+          <img
+            src="/foto.png"
+            alt="Jornada de atención a la comunidad merideña"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="relative z-10 w-full px-6 py-16 sm:px-10 lg:px-14">
+            <div className="max-w-xl space-y-6">
+              <span className="text-sm font-bold text-white/90 tracking-widest uppercase">
+                Beneficencia y Servicio Público
+              </span>
+              <h1 className="text-white">
+                Beneficencia, transparencia y servicio para Mérida
+              </h1>
+              <p className="text-lg text-white/90 leading-relaxed">
+                Trabajamos por la salud, educación, deporte y cultura del pueblo merideño. Portal institucional sujeto a validación oficial.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Button size="lg" asChild>
+                  <Link to="/beneficencia">Conocer programas sociales</Link>
+                </Button>
+                <Button variant="secondary" size="lg" asChild>
+                  <Link to="/tramites">Trámites y servicios</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-        {/* Placeholder for real hero image */}
-        <div className="absolute inset-0 z-0 opacity-10 bg-primary pointer-events-none" />
+
+        {/* Derecha: video */}
+        <div className="relative min-h-80 lg:min-h-0 bg-black">
+          <video
+            src="/Create_a_warm_cinematic_websi.mp4"
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden="true"
+          />
+        </div>
       </section>
 
       {/* Áreas Sociales */}
@@ -41,13 +61,25 @@ export function HomePage() {
             <p className="text-text-muted mt-2">Dato pendiente de publicación oficial</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {["Salud", "Educación", "Deporte", "Cultura"].map((area) => (
-              <Card key={area} className="hover:shadow-modal transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-secondary">{area}</CardTitle>
+            {[
+              { name: "Salud", image: "/inicio_salud.jpg" },
+              { name: "Educación", image: "/inicio_educacion.jpg" },
+              { name: "Deporte", image: "/inicio_deporte.jpg" },
+              { name: "Cultura", image: "/inicio_cultura.jpg" },
+            ].map((area) => (
+              <Card key={area.name} className="relative overflow-hidden hover:shadow-modal transition-shadow">
+                <img
+                  src={area.image}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-white/55" />
+                <CardHeader className="relative z-10">
+                  <CardTitle className="text-secondary">{area.name}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription>
+                <CardContent className="relative z-10">
+                  <CardDescription className="text-text">
                     Programas y ayudas orientadas a fortalecer este sector en el estado Mérida.
                   </CardDescription>
                 </CardContent>

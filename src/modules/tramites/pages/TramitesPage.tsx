@@ -1,4 +1,5 @@
 import React from "react"
+import { PageBanner } from "@/modules/shared/components/layout/PageBanner"
 import { Link } from "react-router-dom"
 import { Button } from "@/modules/shared/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/modules/shared/components/ui/card"
@@ -19,16 +20,14 @@ export function TramitesPage() {
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
       {/* Hero Trámites */}
-      <section className="bg-primary text-on-primary py-24 px-4">
-        <div className="container mx-auto max-w-[1280px]">
-          <div className="max-w-3xl space-y-6">
-            <h1 className="text-on-primary">Trámites y Servicios</h1>
-            <p className="text-lg opacity-90 leading-relaxed">
-              Catálogo de servicios digitales de la Lotería de Mérida. Seleccione su perfil para visualizar los trámites disponibles.
-            </p>
-          </div>
+      <PageBanner>
+        <div className="max-w-3xl space-y-6">
+          <h1 className="text-white">Trámites y Servicios</h1>
+          <p className="text-lg opacity-90 leading-relaxed">
+            Catálogo de servicios digitales de la Lotería de Mérida. Seleccione su perfil para visualizar los trámites disponibles.
+          </p>
         </div>
-      </section>
+      </PageBanner>
 
       {/* Aviso de validación */}
       <div className="bg-warning text-white p-4 text-sm text-center font-medium">

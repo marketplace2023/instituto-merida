@@ -1,4 +1,5 @@
 import React from "react"
+import { PageBanner } from "@/modules/shared/components/layout/PageBanner"
 import { Link } from "react-router-dom"
 import { Button } from "@/modules/shared/components/ui/button"
 import { Card, CardContent } from "@/modules/shared/components/ui/card"
@@ -7,17 +8,15 @@ import { Input } from "@/modules/shared/components/ui/input"
 export function SolicitudPage() {
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
-      <section className="bg-surface py-12 px-4 border-b border-border">
-        <div className="container mx-auto max-w-[1280px]">
-          <div className="flex items-center gap-2 text-sm text-text-muted mb-4">
-            <Link to="/beneficencia" className="hover:text-primary transition-colors">Beneficencia</Link>
-            <span>/</span>
-            <span className="text-text font-medium">Solicitar Apoyo</span>
-          </div>
-          <h1 className="text-primary">Solicitud de Asistencia Social</h1>
-          <p className="text-text-muted mt-2">Formulario oficial para ingresar solicitudes de ayudas y programas sociales.</p>
+      <PageBanner size="sm">
+        <div className="flex items-center gap-2 text-sm text-white/85 mb-4">
+          <Link to="/beneficencia" className="hover:text-white transition-colors">Beneficencia</Link>
+          <span>/</span>
+          <span className="text-white font-medium">Solicitar Apoyo</span>
         </div>
-      </section>
+        <h1 className="text-white">Solicitud de Asistencia Social</h1>
+        <p className="text-white/85 mt-2">Formulario oficial para ingresar solicitudes de ayudas y programas sociales.</p>
+      </PageBanner>
 
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-[1280px] max-w-3xl">

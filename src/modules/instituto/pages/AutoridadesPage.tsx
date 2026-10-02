@@ -1,4 +1,5 @@
 import React from "react"
+import { PageBanner } from "@/modules/shared/components/layout/PageBanner"
 import { Link } from "react-router-dom"
 import { Card, CardContent } from "@/modules/shared/components/ui/card"
 
@@ -13,16 +14,14 @@ export function AutoridadesPage() {
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
       {/* Header Breve */}
-      <section className="bg-surface py-12 px-4 border-b border-border">
-        <div className="container mx-auto max-w-[1280px]">
-          <div className="flex items-center gap-2 text-sm text-text-muted mb-4">
-            <Link to="/instituto" className="hover:text-primary transition-colors">El Instituto</Link>
-            <span>/</span>
-            <span className="text-text font-medium">Autoridades</span>
-          </div>
-          <h1 className="text-primary">Autoridades y Organigrama</h1>
+      <PageBanner size="sm">
+        <div className="flex items-center gap-2 text-sm text-white/85 mb-4">
+          <Link to="/instituto" className="hover:text-white transition-colors">El Instituto</Link>
+          <span>/</span>
+          <span className="text-white font-medium">Autoridades</span>
         </div>
-      </section>
+        <h1 className="text-white">Autoridades y Organigrama</h1>
+      </PageBanner>
 
       {/* Autoridades */}
       <section className="py-20 px-4">

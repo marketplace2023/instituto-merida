@@ -1,16 +1,17 @@
 import React from "react"
+import { PageBanner } from "@/modules/shared/components/layout/PageBanner"
 import { Link } from "react-router-dom"
 import { Button } from "@/modules/shared/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/modules/shared/components/ui/card"
 
 export function BeneficenciaPage() {
   const areas = [
-    { title: "Salud", description: "Atención médica, entrega de insumos y jornadas quirúrgicas." },
-    { title: "Educación", description: "Becas, dotación de útiles y apoyo a instituciones educativas." },
-    { title: "Deporte", description: "Impulso a atletas, equipos locales y rescate de canchas." },
-    { title: "Cultura", description: "Fomento de tradiciones, eventos culturales y artistas merideños." },
-    { title: "Atención Comunitaria", description: "Asistencia directa a comunidades vulnerables." },
-    { title: "Emergencias", description: "Respuesta rápida ante contingencias naturales o sociales." }
+    { title: "Salud", description: "Atención médica, entrega de insumos y jornadas quirúrgicas.", image: "/beneficiencia_salud.jpg" },
+    { title: "Educación", description: "Becas, dotación de útiles y apoyo a instituciones educativas.", image: "/beneficiencia_educacion.jpg" },
+    { title: "Deporte", description: "Impulso a atletas, equipos locales y rescate de canchas.", image: "/beneficiencia_deporte.jpg" },
+    { title: "Cultura", description: "Fomento de tradiciones, eventos culturales y artistas merideños.", image: "/beneficiencia_cultura.jpg" },
+    { title: "Atención Comunitaria", description: "Asistencia directa a comunidades vulnerables.", image: "/beneficiencia_atencioncomunitaria.jpg" },
+    { title: "Emergencias", description: "Respuesta rápida ante contingencias naturales o sociales.", image: "/beneficiencia_emergencia.jpg" }
   ]
 
   const steps = [
@@ -23,24 +24,22 @@ export function BeneficenciaPage() {
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
       {/* Hero Beneficencia */}
-      <section className="relative bg-secondary text-on-secondary py-24 px-4 overflow-hidden">
-        <div className="container mx-auto max-w-[1280px] relative z-10">
-          <div className="max-w-2xl space-y-6">
-            <h1 className="text-on-secondary">Beneficencia y Asistencia Social</h1>
-            <p className="text-lg opacity-90 leading-relaxed">
-              El corazón de la Lotería de Mérida late por su gente. Destinamos recursos para apoyar a quienes más lo necesitan a través de programas transparentes y directos.
-            </p>
-            <div className="pt-4 flex gap-4">
-              <Button variant="accent" size="lg" asChild>
-                <Link to="/beneficencia/solicitar">Solicitar Apoyo</Link>
-              </Button>
-              <Button className="bg-white/10 hover:bg-white/20 text-white" size="lg" asChild>
-                <Link to="/beneficencia/programas">Ver Programas</Link>
-              </Button>
-            </div>
+      <PageBanner>
+        <div className="max-w-2xl space-y-6">
+          <h1 className="text-white">Beneficencia y Asistencia Social</h1>
+          <p className="text-lg opacity-90 leading-relaxed">
+            El corazón de la Lotería de Mérida late por su gente. Destinamos recursos para apoyar a quienes más lo necesitan a través de programas transparentes y directos.
+          </p>
+          <div className="pt-4 flex gap-4">
+            <Button variant="accent" size="lg" asChild>
+              <Link to="/beneficencia/solicitar">Solicitar Apoyo</Link>
+            </Button>
+            <Button className="bg-white/10 hover:bg-white/20 text-white" size="lg" asChild>
+              <Link to="/beneficencia/programas">Ver Programas</Link>
+            </Button>
           </div>
         </div>
-      </section>
+      </PageBanner>
 
       {/* Áreas de Atención */}
       <section className="py-20 px-4 bg-surface">
@@ -51,12 +50,19 @@ export function BeneficenciaPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {areas.map((area) => (
-              <Card key={area.title} className="hover:shadow-card transition-all">
-                <CardHeader>
+              <Card key={area.title} className="relative overflow-hidden hover:shadow-card transition-all">
+                <img
+                  src={area.image}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-white/55" />
+                <CardHeader className="relative z-10">
                   <CardTitle className="text-secondary">{area.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription>{area.description}</CardDescription>
+                <CardContent className="relative z-10">
+                  <CardDescription className="text-text">{area.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}

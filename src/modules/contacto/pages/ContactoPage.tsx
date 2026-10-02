@@ -1,4 +1,5 @@
 import React from "react"
+import { PageBanner } from "@/modules/shared/components/layout/PageBanner"
 import { Button } from "@/modules/shared/components/ui/button"
 import { Card, CardContent } from "@/modules/shared/components/ui/card"
 import { Input } from "@/modules/shared/components/ui/input"
@@ -6,12 +7,10 @@ import { Input } from "@/modules/shared/components/ui/input"
 export function ContactoPage() {
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
-      <section className="bg-surface py-12 px-4 border-b border-border">
-        <div className="container mx-auto max-w-[1280px]">
-          <h1 className="text-primary">Atención Ciudadana y Contacto</h1>
-          <p className="text-text-muted mt-2">Canales oficiales de comunicación con la Lotería de Mérida.</p>
-        </div>
-      </section>
+      <PageBanner>
+        <h1 className="text-white">Atención Ciudadana y Contacto</h1>
+        <p className="text-white/85 mt-2">Canales oficiales de comunicación con la Lotería de Mérida.</p>
+      </PageBanner>
 
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-[1280px] grid grid-cols-1 lg:grid-cols-2 gap-12">

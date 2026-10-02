@@ -1,4 +1,5 @@
 import React from "react"
+import { PageBanner } from "@/modules/shared/components/layout/PageBanner"
 import { Card, CardContent } from "@/modules/shared/components/ui/card"
 
 export function NoticiasPage() {
@@ -11,12 +12,10 @@ export function NoticiasPage() {
 
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
-      <section className="bg-surface py-12 px-4 border-b border-border">
-        <div className="container mx-auto max-w-[1280px]">
-          <h1 className="text-primary">Noticias e Información</h1>
-          <p className="text-text-muted mt-2">Sala de prensa oficial de la Lotería de Mérida.</p>
-        </div>
-      </section>
+      <PageBanner>
+        <h1 className="text-white">Noticias e Información</h1>
+        <p className="text-white/85 mt-2">Sala de prensa oficial de la Lotería de Mérida.</p>
+      </PageBanner>
 
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-[1280px]">
