@@ -7,7 +7,7 @@ export function HomePage() {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="grid w-full grid-cols-2 min-h-[calc(100vh-80px)] overflow-hidden">
+      <section className="grid w-full grid-cols-2 min-h-[420px] sm:min-h-[560px] lg:min-h-[calc(100vh-80px)] overflow-hidden">
         {/* Izquierda: foto con texto superpuesto */}
         <div className="relative flex items-center overflow-hidden">
           <img
@@ -16,7 +16,7 @@ export function HomePage() {
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black/55" />
-          <div className="relative z-10 w-full px-3 py-10 sm:px-10 sm:py-16 lg:px-14">
+          <div className="relative z-10 w-full px-3 py-8 sm:px-10 sm:py-16 lg:px-14">
             <div className="max-w-xl space-y-3 sm:space-y-6">
               <span className="text-[0.65rem] sm:text-sm font-bold text-white/90 tracking-widest uppercase">
                 Beneficencia y Servicio Público
