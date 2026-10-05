@@ -7,31 +7,31 @@ export function HomePage() {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="grid w-full grid-cols-1 lg:grid-cols-2 lg:min-h-[calc(100vh-80px)] overflow-hidden">
+      <section className="grid w-full grid-cols-2 min-h-[calc(100vh-80px)] overflow-hidden">
         {/* Izquierda: foto con texto superpuesto */}
-        <div className="relative flex min-h-130 items-center overflow-hidden">
+        <div className="relative flex items-center overflow-hidden">
           <img
             src="/foto.png"
             alt="Jornada de atención a la comunidad merideña"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black/55" />
-          <div className="relative z-10 w-full px-6 py-16 sm:px-10 lg:px-14">
-            <div className="max-w-xl space-y-6">
-              <span className="text-sm font-bold text-white/90 tracking-widest uppercase">
+          <div className="relative z-10 w-full px-3 py-10 sm:px-10 sm:py-16 lg:px-14">
+            <div className="max-w-xl space-y-3 sm:space-y-6">
+              <span className="text-[0.65rem] sm:text-sm font-bold text-white/90 tracking-widest uppercase">
                 Beneficencia y Servicio Público
               </span>
-              <h1 className="text-white">
+              <h1 className="text-white text-xl sm:text-4xl lg:text-5xl">
                 Beneficencia, transparencia y servicio para Mérida
               </h1>
-              <p className="text-lg text-white/90 leading-relaxed">
+              <p className="text-xs sm:text-lg text-white/90 leading-relaxed">
                 Trabajamos por la salud, educación, deporte y cultura del pueblo merideño. Portal institucional sujeto a validación oficial.
               </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" asChild>
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 pt-2 sm:pt-4">
+                <Button size="lg" className="h-auto min-h-11 whitespace-normal px-3 py-2 text-xs sm:h-12 sm:px-6 sm:text-base" asChild>
                   <Link to="/beneficencia">Conocer programas sociales</Link>
                 </Button>
-                <Button variant="secondary" size="lg" asChild>
+                <Button variant="secondary" size="lg" className="h-auto min-h-11 whitespace-normal px-3 py-2 text-xs sm:h-12 sm:px-6 sm:text-base" asChild>
                   <Link to="/tramites">Trámites y servicios</Link>
                 </Button>
               </div>
@@ -40,7 +40,7 @@ export function HomePage() {
         </div>
 
         {/* Derecha: video */}
-        <div className="relative min-h-80 lg:min-h-0 bg-black">
+        <div className="relative bg-black">
           <video
             src="/Create_a_warm_cinematic_websi.mp4"
             className="absolute inset-0 h-full w-full object-cover"
